@@ -51,6 +51,7 @@ public class Main {
     List<Creature> sortedCreatures = everyone;
 
     while (player.hp > 0) {
+        System.out.println("================================");
         System.out.println("Round: " + roundNum);
         System.out.println("================================");
       
@@ -86,8 +87,8 @@ public class Main {
             }
             
             }
-            roundNum =+ 1;
-    }
+            roundNum += 1;
+        }
       
        // Simulate a battle for 20 rounds
 //        for (int roundNum = 1; roundNum <= 20; roundNum++) {
