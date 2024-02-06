@@ -135,7 +135,7 @@ public class Wizard extends Creature {
         int num = scanner.nextInt();
         Creature choice = targetList.get(num-1);
         System.out.println("You selected: " + choice);
-        scanner.close();
+        // scanner.close();
         Creature target = choice;
         return target;
         }
@@ -164,7 +164,7 @@ public class Wizard extends Creature {
                 Creature targetEnemy = this.selectTarget(enemies);
                 this.attack(targetEnemy);
                 targetEnemy.checkLife();
-                scanner.close();
+                // scanner.close();
                 return false;
 
                 case "R":
@@ -198,7 +198,7 @@ public class Wizard extends Creature {
                 action = scanner.nextLine();
 
             }
-            scanner.close();
+            // scanner.close();
         }
 
 
