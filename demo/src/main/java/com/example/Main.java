@@ -86,7 +86,9 @@ public class Main {
                 i.turn(roundNum, allies);
             }
             else{
+                System.out.println("================================");
                 System.out.println("The Wizard is dead and the battle is lost, better luck next time......");
+                System.out.println("================================");
                 break;
             }
             
