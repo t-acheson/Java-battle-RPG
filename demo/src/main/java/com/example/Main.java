@@ -57,7 +57,8 @@ public class Main {
       
         for (Creature i : sortedCreatures) {
             if (player.hp < 0) {
-            //    return false;
+            // System.out.println("The Wizard is dead and the battle is lost, better luck next time......");
+            // break;
             }
             else if (!bossEntered && roundNum == 3) {
                System.out.println("================================");
@@ -78,11 +79,15 @@ public class Main {
                     System.out.println(x.name + " HP: " + x.hp + "/" + x.maxHp);
                 }
                 ((Wizard) i).Turn(roundNum, allies, enemies, goodGuys);
-            }else if (allies.contains(i)){
+            }else if (allies.contains(i) && player.hp>0){
                i.turn(roundNum, enemies );
             }
-            else if (enemies.contains(i)){
+            else if (enemies.contains(i)&& player.hp>0){
                 i.turn(roundNum, allies);
+            }
+            else{
+                System.out.println("The Wizard is dead and the battle is lost, better luck next time......");
+                break;
             }
             
             }
