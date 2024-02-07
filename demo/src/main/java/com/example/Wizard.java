@@ -8,6 +8,7 @@ public class Wizard extends Creature {
     public int arcana;
     public int mana;
     public int maxMana;
+    Scanner scanner = new Scanner(System.in);
     // Constructor
    public Wizard(String name){
     super(name, 20);
@@ -127,14 +128,14 @@ public class Wizard extends Creature {
     }
 
     public Creature selectTarget(List<Creature> targetList){
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < targetList.size(); i++){
             System.out.println((i + 1) + ": " + targetList.get(i).name + ", HP: " + targetList.get(i).hp + "/" + targetList.get(i).maxHp);
         }
         System.out.println("Enter choice of target: ");
         int num = scanner.nextInt();
         Creature choice = targetList.get(num-1);
-        System.out.println("You selected: " + choice);
+        System.out.println("You selected: " + choice.name);
         // scanner.close();
         Creature target = choice;
         return target;
@@ -145,7 +146,7 @@ public class Wizard extends Creature {
     public boolean Turn(int roundNum, List<Creature> allies, List<Creature> enemies, List<Creature> goodGuys){
         // System.out.println("Enter action: ");
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         System.out.println("Enter action: ");
         String action = scanner.nextLine().toUpperCase();
 
